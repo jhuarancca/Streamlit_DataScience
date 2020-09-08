@@ -13,6 +13,7 @@ st.markdown("This pplication is a Streamlit Dashboard that can be used to analyz
 
 #@st.cache(persist=True)
 #@st.cache(allow_output_mutation=True)
+@st.cache()
 def load_data(nrows):
         data=pd.read_csv(DATA_URL,nrows=nrows, parse_dates=[['CRASH_DATE','CRASH_TIME']])
         data.dropna(subset=['LATITUDE','LONGITUDE'],inplace=True)
