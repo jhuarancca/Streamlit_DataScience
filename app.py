@@ -4,8 +4,8 @@ import numpy as np
 import pydeck as pdk
 import plotly.express as px
 
-DATA_URL=("/home/rhyme/Desktop/Project/Motor_Vehicle_Collisions_-_Crashes.csv")
-
+#DATA_URL=("/home/rhyme/Desktop/Project/Motor_Vehicle_Collisions_-_Crashes.csv")
+DATA_URL=("https://raw.githubusercontent.com/jhuarancca/Streamlit_DataScience/master/Motor_Vehicle_Collisions_-_Crashes.csv")
 
 st.title("Motor Vehicle Colisions in New York City")
 st.markdown("This pplication is a Streamlit Dashboard that can be used to analyze motor vehicle colisions in NYC 🗽 🏎️")
