@@ -30,7 +30,9 @@ st.map(data.query("injured_persons >= @injured_people")[["latitude","longitude"]
 
 st.header("How many collisions occur during a given time of day?")
 hour=st.slider("Hour to look at ",0,23)
+data['date/time'] = pd.to_datetime(data['date/time'], errors='coerce')
 data=data[data['date/time'].dt.hour == hour]
+
 
 st.markdown("Vehicle collisions between %i:00 and %i:00" %(hour, (hour + 1)% 24))
 midpoint=(np.average(data['latitude']),np.average(data['longitude']))
